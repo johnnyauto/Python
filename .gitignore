@@ -1,0 +1,10 @@
+
+LICENSE
+dist/
+build/
+__pycache__/
+*.spec
+*.dbc
+*.ldf
+*.xlsx
+

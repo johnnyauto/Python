@@ -18,15 +18,18 @@ def traverse_directory(directory, target):
                     with open(file_path, 'r', encoding='utf-8') as file:
                         content = file.read()
 
+                    # replace original with current
                     modified_content = content.replace(original, current)
+                    print(original, ' -> ', current, file_path)
 
                     with open(file_path, 'w', encoding='utf-8') as file:
                         file.write(modified_content)
-                        print('Modified: ', file_path)
 
 def main():
-    root_directory = r'D:\OneDrive - Inventec Corp\VectorRepository\Save_vTS\CEM\TU_FrontWiperWash\Temp'
-    target = '.vtsd'
+    root_directory = input('Please enter the directory: ')
+    target = input('Please enter the target: ')
+    #root_directory = r'D:\OneDrive - Inventec Corp\VectorRepository\Save_vTS\CEM\TU_FrontWiperWash\Temp'
+    #target = '.vtsd'
     traverse_directory(root_directory, target)
 
 if __name__ == '__main__':
